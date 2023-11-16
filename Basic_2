@@ -1,0 +1,25 @@
+/*--------------------------------------------QUESTION--------------------------------------------------------------------------------
+Create Two Pointers. 
+1-first pointer should have pointee value of 1.
+2--second pointer should have pointee value of 2.
+
+Finally, Both pointers should point to the same pointee that is second pointee which has a value of 2.
+
+-----------------------------------------------------------------------------------------------------------------------------------------*/
+#include<stdio.h>
+int main(){
+    int *pointer1;
+    int *pointer2;
+
+    pointer1=malloc(sizeof (int));
+    pointer2=malloc(sizeof (int));
+
+    *pointer1=1;
+    *pointer2=2;
+
+    pointer1=pointer2;
+
+    printf("values:%d\n",*pointer1);
+     printf("values:%d\n",*pointer2);
+
+}
