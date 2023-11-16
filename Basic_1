@@ -12,4 +12,6 @@ int main(){
     *pointer2=13;
     printf("value=%d\n",*pointer1);
 
+/* This is what sharing is all about "MULTIPLE POINTERS" pointing to one pointee */
+
 }
