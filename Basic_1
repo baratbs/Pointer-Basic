@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    int *pointer1;
+    int *pointer2;        //These two are pointers.
+    
+    /*The pointee for pointer1 is "DYNAMICALLY ALLOCATED* seperately witt the standard library function malloc()*/
+
+    pointer1=malloc(sizeof (int));
+
+    *pointer1=42;
+    pointer2=pointer1;
+    *pointer2=13;
+    printf("value=%d\n",*pointer1);
+
+}
