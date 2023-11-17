@@ -1,0 +1,30 @@
+-----------------------------------------------FUNCTION POINTERS--------------------------------------------------------------------------------
+
+/*Example1*/
+
+#include<stdio.h>
+
+void function(int a){
+    printf("value is=%d\n",a);
+}
+
+int main(){
+function(77);            //Normal_function calling.
+
+/* DECLARATION OF FUNCTION POINTER */
+void (*fun_ptr1)(int)=NULL;
+/*Assigning it to NULL is a better Programming Practice*/
+
+
+/*After declaration the next step is to assign it to the address of the function*/
+fun_ptr1=funciton;
+/* & symbol is is not required. Because, like array name funciton name is also a pointer*/
+
+/* Last step is to invoke this function using the function pointer*/
+fun_ptr1(77);
+/* This will work like this. But, anyone read your code should know this is the funciton pointer invoke as follows*/
+*(fun_ptr1)(99);
+
+return 0;
+}
+
