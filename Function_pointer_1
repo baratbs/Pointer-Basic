@@ -23,7 +23,7 @@ fun_ptr1=funciton;
 /* Last step is to invoke this function using the function pointer*/
 fun_ptr1(77);
 /* This will work like this. But, anyone read your code should know this is the funciton pointer invoke as follows*/
-*(fun_ptr1)(99);
+(*fun_ptr1)(99);
 
 return 0;
 }
