@@ -1,0 +1,105 @@
+#include<stdio.h>
+
+int add(int , int);
+int sub(int ,int );
+int mul(int ,int);
+
+int main(){
+
+int a=50,b=40;
+int result;
+
+result=add(a,b);
+printf("%d+%d=%d\n",a,b,result);
+
+result=sub(a,b);
+printf("%d-%d=%d\n",a,b,result);
+
+result=mul(a,b);
+printf("%d*%d=%d\n",a,b,result);
+}
+
+int add(int a, int b){
+	return(a+b);
+}
+
+int sub(int a,int b){
+	return(a-b);
+}
+
+int mul(int a,int b){
+	return(a*b);
+}
+
+
+//Program with Function_pointer
+#include<stdio.h>
+
+int add(int a,int b);
+int sub(int a,int b);
+int mul(int a,int b);
+
+
+int compute(int (*fun_ptr)(int,int),int,int);
+
+int main(){
+int a=10,b=20;
+
+int rv1=compute(add,a,b);
+printf("%d+%d=%d\n",a,b,rv1);
+
+int rv2=compute(sub,a,b);
+printf("%d-%d=%d\n",a,b,rv2);
+
+
+int rv3=compute(mul,a,b);
+printf("%d*%d=%d\n",a,b,rv3);
+
+return 0;
+}
+
+int add(int a,int b){
+	return(a+b);
+}
+
+int sub(int a,int b){
+	return(a-b);
+}
+
+int mul(int a,int b){
+	return(a*b);
+}
+
+int compute(int (*fptr)(int,int),int a,int b){
+	int result=(*fptr)(a,b);
+	return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
